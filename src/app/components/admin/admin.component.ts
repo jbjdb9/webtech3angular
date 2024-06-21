@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminService } from '../../services/admin.service';
 import { CommonModule } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-admin',
   standalone: true,
   imports: [HttpClientModule, CommonModule],
-  providers: [AdminService],
+  providers: [AdminService, AuthService],
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.css']
 })
