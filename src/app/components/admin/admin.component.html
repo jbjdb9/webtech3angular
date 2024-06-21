@@ -1,11 +1,22 @@
 <div>
-    <h2>Aggregate Data</h2>
-    <pre>{{ aggregateData | json }}</pre>
-  
-    <h2>Players</h2>
-    <pre>{{ players | json }}</pre>
-  
-    <h2>Aggregated By Date</h2>
-    <pre>{{ aggregatedByDate | json }}</pre>
+  <h2>Aggregate Data</h2>
+  <div *ngFor="let data of aggregateData">
+    <div *ngFor="let key of getObjectKeys(data)">
+      <p>{{ key }}: {{ data[key] }}</p>
+    </div>
   </div>
-  
+
+  <h2>Players</h2>
+  <div *ngFor="let player of players">
+    <div *ngFor="let key of getObjectKeys(player)">
+      <p>{{ key }}: {{ player[key] }}</p>
+    </div>
+  </div>
+
+  <h2>Aggregated By Date</h2>
+  <div *ngFor="let data of aggregatedByDate">
+    <div *ngFor="let key of getObjectKeys(data)">
+      <p>{{ key }}: {{ data[key] }}</p>
+    </div>
+  </div>
+</div>

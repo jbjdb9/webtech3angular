@@ -31,4 +31,8 @@ export class AdminComponent implements OnInit {
       this.aggregatedByDate = response;
     });
   }
+
+  getObjectKeys(obj: any): string[] {
+    return Object.keys(obj);
+  }
 }
